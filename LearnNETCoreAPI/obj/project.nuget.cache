@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1bQMOqe7gk8cy3H8PgYpYOtmkVbCM/X8U+GMDO88UFRmUX76w3C7wMm27VUkcu1Ki+4nPzXmJF5ZBT/o4ML/cQ==",
+  "dgSpecHash": "AvL1dq7pgyKy/ivcUgmLNl05el3bFiUidrWBdwa/1zREzxN9bx7EN5WI5sK4Rp5ANa75F5RgvEm7ytL7QN9FMQ==",
   "success": true,
   "projectFilePath": "D:\\NET Core\\LearnNETCoreAPI\\LearnNETCoreAPI\\Commander.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,7 @@
     "C:\\Users\\adty4\\.nuget\\packages\\microsoft.entityframeworkcore\\3.1.0\\microsoft.entityframeworkcore.3.1.0.nupkg.sha512",
     "C:\\Users\\adty4\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\3.1.0\\microsoft.entityframeworkcore.abstractions.3.1.0.nupkg.sha512",
     "C:\\Users\\adty4\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\3.1.0\\microsoft.entityframeworkcore.analyzers.3.1.0.nupkg.sha512",
+    "C:\\Users\\adty4\\.nuget\\packages\\microsoft.entityframeworkcore.design\\3.1.0\\microsoft.entityframeworkcore.design.3.1.0.nupkg.sha512",
     "C:\\Users\\adty4\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\3.1.0\\microsoft.entityframeworkcore.relational.3.1.0.nupkg.sha512",
     "C:\\Users\\adty4\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\3.1.0\\microsoft.entityframeworkcore.sqlserver.3.1.0.nupkg.sha512",
     "C:\\Users\\adty4\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\3.1.0\\microsoft.extensions.caching.abstractions.3.1.0.nupkg.sha512",

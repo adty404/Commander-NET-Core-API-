@@ -27,8 +27,7 @@ namespace LearnNETCoreAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<CommanderContext>(opt => opt.UseSqlServer
-                (Configuration.GetConnectionString("CommanderConnection"))); // AddDbContext adds the specified context as a service to the specified dependency injection container
+            services.AddDbContext<CommanderContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("CommanderConnection"))); // AddDbContext adds the specified context as a service to the specified dependency injection container
 
             services.AddControllers();
 
