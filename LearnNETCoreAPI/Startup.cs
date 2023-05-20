@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -26,6 +27,9 @@ namespace LearnNETCoreAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<CommanderContext>(opt => opt.UseSqlServer
+                (Configuration.GetConnectionString("CommanderConnection"))); // AddDbContext adds the specified context as a service to the specified dependency injection container
+
             services.AddControllers();
 
             services.AddScoped<ICommanderRepo, MockCommanderRepo>(); // AddScoped creates a new instance of the specified type for every request
