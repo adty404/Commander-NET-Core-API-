@@ -49,3 +49,5 @@ D:\NET Core\LearnNETCoreAPI\LearnNETCoreAPI\bin\Debug\netcoreapp3.1\runtimes\win
 D:\NET Core\LearnNETCoreAPI\LearnNETCoreAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\NET Core\LearnNETCoreAPI\LearnNETCoreAPI\obj\Debug\netcoreapp3.1\Commander.csproj.CopyComplete
 D:\NET Core\LearnNETCoreAPI\LearnNETCoreAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+D:\NET Core\LearnNETCoreAPI\LearnNETCoreAPI\bin\Debug\netcoreapp3.1\AutoMapper.dll
+D:\NET Core\LearnNETCoreAPI\LearnNETCoreAPI\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
