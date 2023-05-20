@@ -31,7 +31,8 @@ namespace LearnNETCoreAPI
 
             services.AddControllers();
 
-            services.AddScoped<ICommanderRepo, MockCommanderRepo>(); // AddScoped creates a new instance of the specified type for every request
+            // services.AddScoped<ICommanderRepo, MockCommanderRepo>(); // AddScoped creates a new instance of the specified type for every request
+            services.AddScoped<ICommanderRepo, SqlCommanderRepo>(); // AddScoped creates a new instance of the specified type for every request
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

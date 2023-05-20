@@ -9,7 +9,7 @@ namespace Commander.Data
         // We will replace this with a real repository later
 
         // GetAppCommands returns a list of command objects
-        public IEnumerable<Command> GetAppCommands()
+        public IEnumerable<Command> GetAllCommands()
         {
             var commands = new List<Command>
             {

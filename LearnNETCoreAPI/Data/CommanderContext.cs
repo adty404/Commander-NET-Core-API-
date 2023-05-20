@@ -11,7 +11,7 @@ namespace Commander.Data
         }
 
         // DbSet represents a collection of entities from the database
-        // DbSet is a property of DbContext, Command is the model class, get and set are accessors
+        // DbSet is a property of DbContext, Command is the model class, Commands is the table name, get and set are accessors
         public DbSet<Command> Commands { get; set; }
     }
 }
