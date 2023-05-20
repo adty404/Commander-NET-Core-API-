@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "AvL1dq7pgyKy/ivcUgmLNl05el3bFiUidrWBdwa/1zREzxN9bx7EN5WI5sK4Rp5ANa75F5RgvEm7ytL7QN9FMQ==",
+  "dgSpecHash": "vnQMCiwXIbjPk1QeME2sE87e5i7jBlb+OTQfqJLAzmfdz8QYYzDvBB1BH/Zss55cEIqyXuE4FTrlnNKG2lo7Og==",
   "success": true,
   "projectFilePath": "D:\\NET Core\\LearnNETCoreAPI\\LearnNETCoreAPI\\Commander.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\adty4\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
+    "C:\\Users\\adty4\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\adty4\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\adty4\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\adty4\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

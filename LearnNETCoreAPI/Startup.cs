@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Commander.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -30,6 +31,8 @@ namespace LearnNETCoreAPI
             services.AddDbContext<CommanderContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("CommanderConnection"))); // AddDbContext adds the specified context as a service to the specified dependency injection container
 
             services.AddControllers();
+
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies()); // AddAutoMapper adds AutoMapper as a service to the specified dependency injection container
 
             // services.AddScoped<ICommanderRepo, MockCommanderRepo>(); // AddScoped creates a new instance of the specified type for every request
             services.AddScoped<ICommanderRepo, SqlCommanderRepo>(); // AddScoped creates a new instance of the specified type for every request
