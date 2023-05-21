@@ -4,6 +4,7 @@ using AutoMapper;
 using Commander.Data;
 using Commander.Dtos;
 using Commander.Models;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Commander.Controllers
@@ -73,6 +74,35 @@ namespace Commander.Controllers
             }
 
             _mapper.Map(commandUpdateDto, commandModelFromRepo); // Map the commandUpdateDto to the commandModelFromRepo, updating the commandModelFromRepo with the commandUpdateDto values
+
+            _repository.UpdateCommand(commandModelFromRepo); // Update the commandModelFromRepo
+
+            _repository.SaveChanges(); // Save the changes
+
+            return NoContent();
+        }
+
+        [HttpPatch("{id}")] // PATCH api/commands/5
+        public ActionResult PartialCommandUpdate(int id, JsonPatchDocument<CommandUpdateDto> patchDoc)
+        {
+            var commandModelFromRepo = _repository.GetCommandById(id); // Get the commandModel from the repository
+
+            if (commandModelFromRepo == null)
+            {
+                return NotFound();
+            }
+
+            var commandToPatch = _mapper.Map<CommandUpdateDto>(commandModelFromRepo); // Map the commandModelFromRepo to a CommandUpdateDto object
+
+            patchDoc.ApplyTo(commandToPatch, ModelState); // Apply the patchDoc to the commandToPatch, updating the commandToPatch with the patchDoc values and adding any errors to the ModelState
+
+            // Validate the commandToPatch and add any errors to the ModelState
+            if (!TryValidateModel(commandToPatch))
+            {
+                return ValidationProblem(ModelState);
+            }
+
+            _mapper.Map(commandToPatch, commandModelFromRepo); // Map the commandToPatch to the commandModelFromRepo, updating the commandModelFromRepo with the commandToPatch values
 
             _repository.UpdateCommand(commandModelFromRepo); // Update the commandModelFromRepo
 

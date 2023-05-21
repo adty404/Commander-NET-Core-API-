@@ -51,3 +51,7 @@ D:\NET Core\LearnNETCoreAPI\LearnNETCoreAPI\obj\Debug\netcoreapp3.1\Commander.cs
 D:\NET Core\LearnNETCoreAPI\LearnNETCoreAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 D:\NET Core\LearnNETCoreAPI\LearnNETCoreAPI\bin\Debug\netcoreapp3.1\AutoMapper.dll
 D:\NET Core\LearnNETCoreAPI\LearnNETCoreAPI\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\NET Core\LearnNETCoreAPI\LearnNETCoreAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+D:\NET Core\LearnNETCoreAPI\LearnNETCoreAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\NET Core\LearnNETCoreAPI\LearnNETCoreAPI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\NET Core\LearnNETCoreAPI\LearnNETCoreAPI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
