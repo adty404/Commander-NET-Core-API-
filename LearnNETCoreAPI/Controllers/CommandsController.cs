@@ -44,5 +44,19 @@ namespace Commander.Controllers
 
             return NotFound();
         }
+
+        [HttpPost] // POST api/commands
+        // public is the access modifier, ActionResult is the return type, <CommandReadDto> is the generic type (the type of the object returned), CreateCommand is the method name,
+        // and CommandCreateDto is the parameter type
+        public ActionResult <CommandReadDto> CreateCommand(CommandCreateDto commandCreateDto)
+        {
+            var commandModel = _mapper.Map<Command>(commandCreateDto); // Map the commandCreateDto to a Command object
+
+            _repository.CreateCommand(commandModel); // Create the commandModel
+
+            _repository.SaveChanges(); // Save the changes
+
+            return Ok(commandModel); // Return the commandModel
+        }
     }
 }

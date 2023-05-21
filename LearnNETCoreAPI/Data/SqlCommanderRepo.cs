@@ -35,7 +35,7 @@ namespace Commander.Data
 
         public bool SaveChanges()
         {
-            return (_context.SaveChanges() >= 0); // SaveChanges() saves the changes made to the database, >= 0 means that at least one row was affected
+            return (_context.SaveChanges() >= 0); // SaveChanges() saves all changes made in this context to the database
         }
     }
 }
