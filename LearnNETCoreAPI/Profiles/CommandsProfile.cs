@@ -12,9 +12,10 @@ namespace Commander.Profiles
         public CommandsProfile()
         {
             // Source -> Target
-            CreateMap<Command, CommandReadDto>();
-            CreateMap<CommandCreateDto, Command>();
-            CreateMap<CommandUpdateDto, Command>();
+            CreateMap<Command, CommandReadDto>(); // This is converting from Command to CommandReadDto for purposes of reading data (GET)
+            CreateMap<CommandCreateDto, Command>(); // This is converting from CommandCreateDto to Command for purposes of creating data (POST)
+            CreateMap<CommandUpdateDto, Command>(); // This is converting from CommandUpdateDto to Command for purposes of updating data (PUT)
+            CreateMap<Command, CommandUpdateDto>(); // This is converting from Command to CommandUpdateDto for purposes of updating data (PATCH)
         }
     }
 }
