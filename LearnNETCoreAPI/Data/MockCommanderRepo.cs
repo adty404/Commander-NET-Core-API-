@@ -10,6 +10,11 @@ namespace Commander.Data
             throw new System.NotImplementedException();
         }
 
+        public void DeleteCommand(Command cmd)
+        {
+            throw new System.NotImplementedException();
+        }
+
         // This is a mock repository, which is a fake repository that we can use to test our API.
         // We will replace this with a real repository later
 

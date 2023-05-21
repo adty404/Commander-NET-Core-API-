@@ -23,6 +23,16 @@ namespace Commander.Data
             _context.Commands.Add(cmd); // Add() adds the specified object as a new entity to the context
         }
 
+        public void DeleteCommand(Command cmd)
+        {
+            if (cmd == null)
+            {
+                throw new System.ArgumentNullException(nameof(cmd)); // ArgumentNullException is thrown when a null argument is passed to a method that doesn't accept it as a valid argument
+            }
+
+            _context.Commands.Remove(cmd); // Remove() marks the specified object as Deleted
+        }
+
         public IEnumerable<Command> GetAllCommands()
         {
             return _context.Commands.ToList(); // ToList() converts the IEnumerable to a list
