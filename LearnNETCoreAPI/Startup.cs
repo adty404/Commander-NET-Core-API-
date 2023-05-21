@@ -13,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json.Serialization; // This namespace is required to use the CamelCasePropertyNamesContractResolver class
 
 namespace LearnNETCoreAPI
 {
@@ -30,7 +31,10 @@ namespace LearnNETCoreAPI
         {
             services.AddDbContext<CommanderContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("CommanderConnection"))); // AddDbContext adds the specified context as a service to the specified dependency injection container
 
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson(s =>
+            {
+                s.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver(); // CamelCasePropertyNamesContractResolver is used to convert PascalCase to camelCase
+            });
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies()); // AddAutoMapper adds AutoMapper as a service to the specified dependency injection container
 
