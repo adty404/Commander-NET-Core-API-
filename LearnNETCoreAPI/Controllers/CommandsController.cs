@@ -61,5 +61,18 @@ namespace Commander.Controllers
             // Parameters: routeName, routeValues, value
             return CreatedAtRoute(nameof(GetCommandById), new {Id = commandReadDto.Id}, commandReadDto); // Return the commandReadDto
         }
+
+        [HttpPut("{id}")] // PUT api/commands/5
+        public ActionResult UpdateCommand(int id, CommandUpdateDto commandUpdateDto)
+        {
+            var commandModelFromRepo = _repository.GetCommandById(id); // Get the commandModel from the repository
+
+            if (commandModelFromRepo == null)
+            {
+                return NotFound();
+            }
+
+
+        }
     }
 }
