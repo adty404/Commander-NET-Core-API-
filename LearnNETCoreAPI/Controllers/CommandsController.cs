@@ -72,7 +72,13 @@ namespace Commander.Controllers
                 return NotFound();
             }
 
+            _mapper.Map(commandUpdateDto, commandModelFromRepo); // Map the commandUpdateDto to the commandModelFromRepo, updating the commandModelFromRepo with the commandUpdateDto values
 
+            _repository.UpdateCommand(commandModelFromRepo); // Update the commandModelFromRepo
+
+            _repository.SaveChanges(); // Save the changes
+
+            return NoContent();
         }
     }
 }
