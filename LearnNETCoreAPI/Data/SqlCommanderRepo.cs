@@ -37,5 +37,10 @@ namespace Commander.Data
         {
             return (_context.SaveChanges() >= 0); // SaveChanges() saves all changes made in this context to the database
         }
+
+        public void UpdateCommand(Command cmd)
+        {
+            // Nothing
+        }
     }
 }
